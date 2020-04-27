@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>JS partie 5 exo 3</title>
+
+</head>
+
+
+<body class="bg-dark">
+    <div class="container bg-dark py-2">
+        <div class="row bg-light py-5 justify-content-center">
+            <div class="col-10">
+
+                <p class="h2"> Partie 5 - Les évènements et la manipulation du DOM</p>
+
+                <p class="h4"> Exercice 3</p>
+                <p>
+                    Créer un formulaire contenant un champ <b>nom</b>, un champ <b>mail</b> et un champ <b>age</b>.<br>
+                    Si les champs ne correspondent pas à une regex, afficher un message d'erreur en rouge sous le champs
+                    dès que l'on entre une valeur.
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container bg-dark py-2">
+        <div class="row bg-light py-5 justify-content-center">
+            <div class="col-10">
+                <form action="">
+                    <div class="border m-2 p-2">
+                        <label for="name">Votre Nom:</label><br>
+                        <input class="p-2" type="text" id="name" size="40" name="name" placeholder="Jean"
+                            onkeyup=showname()><span id="errorname"></span>
+                    </div>
+                    <div class="border m-2 p-2">
+                        <label for="mail">Votre Mail :</label><br>
+                        <input class="p-2" type="email" id="mail" size="40" name="mail" placeholder="123@abc.com"
+                            onkeyup=showmail()><span id="errormail"></span>
+                    </div>
+                    <div class="border m-2 p-2">
+                        <label for="age">Votre Age :</label><br>
+                        <input class="p-2" type="text" id="age" size="40" name="age" placeholder="45"
+                            onkeyup=showage()><span id="errorage"></span>
+                    </div>
+                    <!-- <button class="m-2" type="button" onclick="show()">Valider</button> -->
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        function showname() {
+            let idname = document.getElementById("name");
+            let regexname = /^[a-zA-Z]+$/;
+            let iderror = document.getElementById("errorname");
+
+            if (regexname.test(idname.value) == true) {
+                idname.style.borderColor = "green";
+                iderror.innerHTML = " ";
+            } else {
+                idname.style.borderColor = "red";
+                iderror.innerHTML = " error!";
+                iderror.style.color = "red";
+            }
+        }
+
+        function showmail() {
+            let idmail = document.getElementById("mail");
+            let regexmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            let iderror = document.getElementById("errormail");
+
+            if (regexmail.test(idmail.value) == true) {
+                idmail.style.borderColor = "green";
+                iderror.innerHTML = " ";
+
+            } else {
+                idmail.style.borderColor = "red";
+                iderror.innerHTML = " error!";
+                iderror.style.color = "red";
+            }
+        }
+
+        function showage() {
+            let idage = document.getElementById("age");
+            let regexage = /^[0-9]{1,2}$/;
+            let iderror = document.getElementById("errorage");
+
+            if (regexage.test(idage.value) == true) {
+                idage.style.borderColor = "green";
+                iderror.innerHTML = " ";
+            } else {
+                idage.style.borderColor = "red";
+                iderror.innerHTML = " error!";
+                iderror.style.color = "red";
+            }
+        }
+    </script>
+
+
+
+</body>
+
+</html>

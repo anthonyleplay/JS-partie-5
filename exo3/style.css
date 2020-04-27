@@ -1,0 +1,6 @@
+.passok{
+    border: solid 2px green;
+}
+.passnotok{
+    border: solid 2px red;
+}

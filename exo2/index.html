@@ -19,12 +19,9 @@
 
                 <p class="h2"> Partie 5 - Les évènements et la manipulation du DOM</p>
 
-                <p class="h4"> Exercice 1 Devoir</p>
+                <p class="h4"> Exercice 2</p>
                 <p>
-                    Créer un formulaire demandant un mot de passe et une confirmation de mot de passe et comportant un
-                    bouton.
-                    Au clic sur le bouton, si les deux champs sont identiques, les entourer de vert. Sinon les entourer
-                    en rouge.
+                    Refaire le premier exercice mais en utilisant des classes préparées en css.
                 </p>
 
             </div>
@@ -44,15 +41,10 @@
                         <input class="p-2" type="password" id="mdp2" size="40" name="mdp2" placeholder="mot de passe">
                     </div>
                     <button class="m-2" type="button" onclick="showbordermdp()">Valider</button>
-
-
                 </form>
             </div>
         </div>
     </div>
-
-
-
 
 <script>
     function showbordermdp() {
@@ -60,24 +52,22 @@
         let idmdp2 = document.getElementById("mdp2");
 
         if(idmdp1.value === idmdp2.value){
-            console.log("ok");
+            idmdp1.classList.remove("passnotok");
+            idmdp2.classList.remove("passnotok");
             idmdp1.classList.add("passok");
             idmdp2.classList.add("passok");
         }
 
         else{
+            idmdp1.classList.remove("passok");
+            idmdp2.classList.remove("passok");
             idmdp1.classList.add("passnotok");
             idmdp2.classList.add("passnotok");
             window.alert("Nope entrer deux mot de passe identique");
         }
-
     }
 
-
-
 </script>
-
-
 
 </body>
 
