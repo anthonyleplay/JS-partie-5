@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="assets\styles\styles.css"> -->
+    <title>JS partie 5</title>
+
+</head>
+
+
+<body class="bg-dark">
+    <div class="container bg-dark py-2">
+        <div class="row bg-light py-5 justify-content-center">
+            <div class="col-10">
+
+                <p class="h2"> Partie 5 - Les évènements et la manipulation du DOM</p>
+
+                <p class="h4"> Exercice 1 Devoir</p>
+                <p>
+                    Créer un formulaire demandant un mot de passe et une confirmation de mot de passe et comportant un
+                    bouton.
+                    Au clic sur le bouton, si les deux champs sont identiques, les entourer de vert. Sinon les entourer
+                    en rouge.
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container bg-dark py-2">
+        <div class="row bg-light py-5 justify-content-center">
+            <div class="col-10">
+                <form action="">
+                    <div class="border m-2 p-2">
+                        <label for="mdp1">Votre mot de passe :</label><br>
+                        <input class="p-2" type="password" id="mdp1" size="40" name="mdp1" placeholder="mot de passe">
+                    </div>
+                    <div class="border m-2 p-2">
+                        <label for="mdp2">Retaper Votre mot de passe :</label><br>
+                        <input class="p-2" type="password" id="mdp2" size="40" name="mdp2" placeholder="mot de passe">
+                    </div>
+                    <button class="m-2" type="button" onclick="showbordermdp()">Valider</button>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<script>
+    function showbordermdp() {
+        let idmdp1 = document.getElementById("mdp1");
+        let idmdp2 = document.getElementById("mdp2");
+
+        if(idmdp1.value === idmdp2.value){
+            console.log("ok");
+            idmdp1.style.borderColor = "green";
+            idmdp2.style.borderColor = "green";
+        }
+
+        else{
+            idmdp1.style.borderColor = "red";
+            idmdp2.style.borderColor = "red";
+            window.alert("Nope entrer deux mot de passe identique");
+        }
+
+    }
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
