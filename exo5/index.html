@@ -19,31 +19,44 @@
     Il est également apprécié par certains pédagogues qui y trouvent un langage où la syntaxe, clairement séparée des
     mécanismes de bas niveau, permet une initiation aisée aux concepts de base de la programmation.
   </p>
-  <button type="button" onclick="pink()">Rose</button>
-  <button type="button" onclick="blue()">Bleu</button>
-  <button type="button" onclick="purple()">Violet</button>
-  <button type="button" onclick="bold()">Gras</button>
-  <button type="button" onclick="italic()">Italique</button>
+  <button type="button" id="pink">Rose</button>
+  <button type="button" id="blue">Bleu</button>
+  <button type="button" id="purple">Violet</button>
+  <button type="button" id="bold">Gras</button>
+  <button type="button" id="italic">Italique</button>
 
   <script>
     var idText = document.getElementById("text");
+    let idPink = document.getElementById("pink");
+    let idBlue = document.getElementById("blue");
+    let idPurple = document.getElementById("purple");
+    let idBold = document.getElementById("bold");
+    let idItalic = document.getElementById("italic");
+    idPink.addEventListener("click", pink);
+    idBlue.addEventListener("click", blue);
+    idPurple.addEventListener("click", purple);
+    idBold.addEventListener("click", bold);
+    idItalic.addEventListener("click", italic);
 
     function pink() {
       idText.style.color = "pink";
     }
+
     function blue() {
       idText.style.color = "blue";
     }
+
     function purple() {
       idText.style.color = "purple";
     }
+
     function bold() {
-      idText.style.fontWeight="bold";
-    }
-    function italic() {
-      idText.style.fontStyle="italic";
+      idText.style.fontWeight = "bold";
     }
 
+    function italic() {
+      idText.style.fontStyle = "italic";
+    }
   </script>
 
 </body>

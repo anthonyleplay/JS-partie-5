@@ -68,10 +68,10 @@
 
             if (regexname.test(idname.value) == true) {
                 idname.style.borderColor = "green";
-                iderror.innerHTML = " ";
+                iderror.textContent = " ";
             } else {
                 idname.style.borderColor = "red";
-                iderror.innerHTML = " error!";
+                iderror.textContent = " error!";
                 iderror.style.color = "red";
             }
         }
@@ -83,11 +83,11 @@
 
             if (regexmail.test(idmail.value) == true) {
                 idmail.style.borderColor = "green";
-                iderror.innerHTML = " ";
+                iderror.textContent = " ";
 
             } else {
                 idmail.style.borderColor = "red";
-                iderror.innerHTML = " error!";
+                iderror.textContent = " error!";
                 iderror.style.color = "red";
             }
         }
@@ -99,10 +99,10 @@
 
             if (regexage.test(idage.value) == true) {
                 idage.style.borderColor = "green";
-                iderror.innerHTML = " ";
+                iderror.textContent = " ";
             } else {
                 idage.style.borderColor = "red";
-                iderror.innerHTML = " error!";
+                iderror.textContent = " error!";
                 iderror.style.color = "red";
             }
         }
