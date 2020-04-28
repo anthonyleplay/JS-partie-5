@@ -63,7 +63,7 @@
     <script>
         function showname() {
             let idname = document.getElementById("name");
-            let regexname = /^[a-zA-Z]+$/;
+            let regexname = /^[a-zA-Zçéè\-]+$/;
             let iderror = document.getElementById("errorname");
 
             if (regexname.test(idname.value) == true) {
