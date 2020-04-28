@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>JS partie 5 exo 6</title>
+
+</head>
+
+
+<body class="bg-dark">
+    <div class="container bg-dark py-2">
+        <div class="row bg-light py-5 justify-content-center">
+            <div class="col-10">
+
+                <p class="h2"> Partie 5 - Les évènements et la manipulation du DOM</p>
+
+                <p class="h4"> Exercice 6</p>
+                <p>
+                    Dans un formulaire, faire que les champs aient une bordure noire quand ils ont le focus. La supprimer quand ils perdent le focus.
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container bg-dark py-2">
+        <div class="row bg-light py-5 justify-content-center">
+            <div class="col-10">
+                <form action="">
+                    <div class="border m-2 p-2">
+                        <label for="firstname">Firstname :</label><br>
+                        <input class="p-2" type="text" id="firstname" size="40" name="firstname" placeholder="Jean" onfocus="firstFocus()" onblur="blurFunction()">
+                    </div>
+                    <div class="border m-2 p-2">
+                        <label for="lastname">Lastname :</label><br>
+                        <input class="p-2" type="text" id="lastname" size="40" name="lastname" placeholder="mot de passe" onfocus="lastFocus()" onblur="blurFunction()">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+<script>
+    var idFirstname = document.getElementById("firstname");
+    var idLastname = document.getElementById("lastname");
+
+    function firstFocus() {
+        idFirstname.style.border = "3px solid black";
+    }
+    function lastFocus() {
+        idLastname.style.border = "3px solid black";
+    }
+    function blurFunction() {
+        idFirstname.style.border = "";
+        idLastname.style.border = "";
+    }
+
+
+</script>
+
+
+
+</body>
+
+</html>
