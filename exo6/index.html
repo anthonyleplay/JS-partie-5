@@ -48,10 +48,10 @@
 <script>
     var idFirstname = document.getElementById("firstname");
     var idLastname = document.getElementById("lastname");
-    idFirstname.addEventListener("focus", firstFocus);
-    idLastname.addEventListener("focus", lastFocus);
-    idFirstname.addEventListener("blur", loseFocus);
-    idLastname.addEventListener("blur", loseFocus);
+    idFirstname.addEventListener("focusin", firstFocus);
+    idLastname.addEventListener("focusin", lastFocus);
+    idFirstname.addEventListener("focusout", loseFocus);
+    idLastname.addEventListener("focusout", loseFocus);
 
     function firstFocus() {
         idFirstname.style.border = "3px solid black";
