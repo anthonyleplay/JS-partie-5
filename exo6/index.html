@@ -33,11 +33,11 @@
                 <form action="">
                     <div class="border m-2 p-2">
                         <label for="firstname">Firstname :</label><br>
-                        <input class="p-2" type="text" id="firstname" size="40" name="firstname" placeholder="Jean" onfocus="firstFocus()" onblur="loseFocus()">
+                        <input class="p-2" type="text" id="firstname" size="40" name="firstname" placeholder="Jean">
                     </div>
                     <div class="border m-2 p-2">
                         <label for="lastname">Lastname :</label><br>
-                        <input class="p-2" type="text" id="lastname" size="40" name="lastname" placeholder="mot de passe" onfocus="lastFocus()" onblur="loseFocus()">
+                        <input class="p-2" type="text" id="lastname" size="40" name="lastname" placeholder="Dupont" >
                     </div>
                 </form>
             </div>
@@ -48,6 +48,10 @@
 <script>
     var idFirstname = document.getElementById("firstname");
     var idLastname = document.getElementById("lastname");
+    idFirstname.addEventListener("focus", firstFocus);
+    idLastname.addEventListener("focus", lastFocus);
+    idFirstname.addEventListener("blur", loseFocus);
+    idLastname.addEventListener("blur", loseFocus);
 
     function firstFocus() {
         idFirstname.style.border = "3px solid black";
