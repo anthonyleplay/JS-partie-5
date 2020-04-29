@@ -31,16 +31,18 @@
     <div class="container bg-dark py-2">
         <div class="row bg-light py-5 justify-content-center">
             <div class="col-10">
-                <form action="">
-                    <div class="border m-2 p-2">
-                        <label for="name">Votre Nom:</label><br>
-                        <input class="p-2" type="text" id="name" size="40" name="name" placeholder="Jean"
-                            onkeyup=showname()><span id="errorname"></span>
-                    </div>
-                    <div class="border m-2 p-2">
-                        <label for="age">Votre Age :</label><br>
-                        <input class="p-2" type="text" id="age" size="40" name="age" placeholder="45"
-                            onkeyup=showage()><span id="errorage"></span>
+                <form action="" id="formClone">
+                    <div class="border m-2 p-2" id="formCloneIn">
+                        <div class="border m-2 p-2">
+                            <label for="name">Votre Nom:</label><br>
+                            <input class="p-2" type="text" id="name" size="40" name="name" placeholder="Jean"
+                                onkeyup=showname()><span id="errorname"></span>
+                        </div>
+                        <div class="border m-2 p-2">
+                            <label for="age">Votre Age :</label><br>
+                            <input class="p-2" type="text" id="age" size="40" name="age" placeholder="45"
+                                onkeyup=showage()><span id="errorage"></span>
+                        </div>
                     </div>
                 </form>
                 <button class="m-2" type="button" id="buttonClone">+</button>
@@ -49,14 +51,24 @@
     </div>
 
     <script>
-        let idbutton = document.getElementById("buttonClone");
-        var idForm = document.getElementsByTagName("form")[0];
-        idbutton.addEventListener("click", cloneForm);
+        buttonClone.addEventListener("click", cloneForm);
+        let i = 1
 
         function cloneForm() {
-        let clone = idForm.cloneNode(true);
-            idForm.appendChild(clone);
+            let copycat = formCloneIn.cloneNode(true);
+            copycat.id = "formCloneIn" + i++;
+            formClone.appendChild(copycat);
+
         }
+
+        // let idbutton = document.getElementById("buttonClone");
+        // var idForm = document.getElementsByTagName("form")[0];
+        // idbutton.addEventListener("click", cloneForm);
+
+        // function cloneForm() {
+        // let clone = idForm.cloneNode(true);
+        //     idForm.appendChild(clone);
+        // }
     </script>
 
 
