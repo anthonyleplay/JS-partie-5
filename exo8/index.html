@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>JS partie 5 exo 8</title>
+
+</head>
+
+
+<body class="bg-dark">
+    <div class="container bg-dark py-2">
+        <div class="row bg-light py-5 justify-content-center">
+            <div class="col-10">
+
+                <p class="h2"> Partie 5 - Les évènements et la manipulation du DOM</p>
+
+                <p class="h4"> Exercice 8</p>
+                <p>
+                    Créer un formulaire avec un champ prénom et un champ âge. Ajouter un bouton +. Au clic sur ce
+                    bouton, cloner les champs créés.
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container bg-dark py-2">
+        <div class="row bg-light py-5 justify-content-center">
+            <div class="col-10">
+                <form action="">
+                    <div class="border m-2 p-2">
+                        <label for="name">Votre Nom:</label><br>
+                        <input class="p-2" type="text" id="name" size="40" name="name" placeholder="Jean"
+                            onkeyup=showname()><span id="errorname"></span>
+                    </div>
+                    <div class="border m-2 p-2">
+                        <label for="age">Votre Age :</label><br>
+                        <input class="p-2" type="text" id="age" size="40" name="age" placeholder="45"
+                            onkeyup=showage()><span id="errorage"></span>
+                    </div>
+                </form>
+                <button class="m-2" type="button" id="buttonClone">+</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let idbutton = document.getElementById("buttonClone");
+        var idForm = document.getElementsByTagName("form")[0];
+        idbutton.addEventListener("click", cloneForm);
+
+        function cloneForm() {
+        let clone = idForm.cloneNode(true);
+            idForm.appendChild(clone);
+        }
+    </script>
+
+
+
+</body>
+
+</html>

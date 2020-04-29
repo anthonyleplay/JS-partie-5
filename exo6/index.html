@@ -46,10 +46,12 @@
 
 
 <script>
-    var idFirstname = document.getElementById("firstname");
-    var idLastname = document.getElementById("lastname");
+    let idFirstname = document.getElementById("firstname");
+    let idLastname = document.getElementById("lastname");
+
     idFirstname.addEventListener("focusin", firstFocus);
     idLastname.addEventListener("focusin", lastFocus);
+
     idFirstname.addEventListener("focusout", loseFocus);
     idLastname.addEventListener("focusout", loseFocus);
 
@@ -66,8 +68,6 @@
 
 
 </script>
-
-
 
 </body>
 

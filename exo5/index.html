@@ -25,7 +25,7 @@
   <button type="button" id="bold">Gras</button>
   <button type="button" id="italic">Italique</button>
 
-  
+
   <script>
     let idText = document.getElementById("text");
     let idPink = document.getElementById("pink");
@@ -33,34 +33,54 @@
     let idPurple = document.getElementById("purple");
     let idBold = document.getElementById("bold");
     let idItalic = document.getElementById("italic");
-    idPink.addEventListener("click", pink);
-    idBlue.addEventListener("click", blue);
-    idPurple.addEventListener("click", purple);
-    idBold.addEventListener("click", bold);
-    idItalic.addEventListener("click", italic);
+    idPink.addEventListener("click", doPink);
+    idBlue.addEventListener("click", doBlue);
+    idPurple.addEventListener("click", doPurple);
+    idBold.addEventListener("click", doBold);
+    idItalic.addEventListener("click", doItalic);
 
-    function pink() {
-      idText.style.color = "pink";
+    function doPink() {
+      if (idText.style.color == "pink"){
+        idText.style.color = "black";
+      }else{
+        idText.style.color = "pink";
+      }
     }
 
-    function blue() {
-      idText.style.color = "blue";
+    function doBlue() {
+      if (idText.style.color == "blue"){
+        idText.style.color = "black";
+      }else{
+        idText.style.color = "blue";
+      }
     }
 
-    function purple() {
-      idText.style.color = "purple";
+    function doPurple() {
+      if (idText.style.color == "purple"){
+        idText.style.color = "black";
+      }else{
+        idText.style.color = "purple";
+      }
     }
 
-    function bold() {
-      idText.style.fontWeight = "bold";
+    function doBold() {
+      if (idText.style.fontWeight == "bold"){
+        idText.style.fontWeight = "";
+      }else{
+        idText.style.fontWeight = "bold";
+      }
     }
 
-    function italic() {
-      idText.style.fontStyle = "italic";
+    function doItalic() {
+      if (idText.style.fontStyle == "italic"){
+        idText.style.fontStyle = "";
+      }else{
+        idText.style.fontStyle = "italic";
+      }
     }
+
   </script>
 
 </body>
-
 
 </html>
